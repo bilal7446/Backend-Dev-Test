@@ -6,29 +6,38 @@ PORT:9000
 
 =====================ENDPOINTS examples====================
 
-POST localhost:9000/users/create
+<b>POST localhost:9000/users/create </b><br>
     -body as raw json
+    
     {
 	"phoneNumber":"33333",
 	"name":"bilal"
-   }
+	}
+   
+   
 
-GET localhost:9000/users/read
-  -parameters: id,phoneNumber
+<b>GET localhost:9000/users/read</b>:
+ <br> 
+ -parameters: id,phoneNumber
+
   
-PUT localhost:9000/api/v1/update
+<b>PUT localhost:9000/api/v1/update</b><br>
   -parameters: id,phoneNumber
   -body as raw json
+  
     {
 	"phoneNumber":"33333",
 	"name":"bilal"
-   }
+	}
    
- DELETE localhost:9000/api/v1/delete
+ <b>DELETE localhost:9000/api/v1/delete </b><br>
    -parameters: id,phoneNumber
     
 
 ===========DATABASE MODEL====================
-  id: string
-  phoneNumber: string
+<br>
+
+  id: string <br>
+  phoneNumber: string <br>
   name: string
+	
