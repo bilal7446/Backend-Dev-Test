@@ -1,5 +1,5 @@
 import express from 'express';
-import TodoValidator from '../validator';
+import UsersValidator from '../validator';
 import Middleware from '../../middleware';
 import UsersController from '../controller';
 
@@ -7,35 +7,35 @@ const router = express.Router();
 
 router.post(
 	'/create',
-	TodoValidator.checkCreateUsers(),
+	UsersValidator.checkCreateUsers(),
 	Middleware.handleValidationError,
 	UsersController.create
 );
 
 router.get(
 	'/read',
-	TodoValidator.checkReadUsers(),
+	UsersValidator.checkReadUsers(),
 	Middleware.handleValidationError,
 	UsersController.readPagination
 );
 
 router.get(
 	'/read/:id',
-	TodoValidator.checkIdParam(),
+	UsersValidator.checkIdParam(),
 	Middleware.handleValidationError,
 	UsersController.readByID
 );
 
 router.put(
 	'/update',
-	TodoValidator.checkIdParam(),
+	UsersValidator.checkIdParam(),
 	Middleware.handleValidationError,
 	UsersController.update
 );
 
 router.delete(
 	'/delete',
-	TodoValidator.checkIdParam(),
+	UsersValidator.checkIdParam(),
 	Middleware.handleValidationError,
 	UsersController.delete
 );
