@@ -1,6 +1,6 @@
 import { body, param, query } from 'express-validator';
 
-class TodoValidator {
+class UsersValidator {
 	checkCreateUsers() {
 		return [
 			body('id')
@@ -34,4 +34,4 @@ class TodoValidator {
 	}
 }
 
-export default new TodoValidator();
+export default new UsersValidator();
